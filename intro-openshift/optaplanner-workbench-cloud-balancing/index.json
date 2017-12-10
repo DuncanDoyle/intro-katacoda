@@ -1,0 +1,54 @@
+{
+  "title": "OptaPlanner Cloud Balancing on OpenShift",
+  "description": "Learn how to create a planner demo project in JBoss BRP/OptaPlanner running on OpenShift Container Platform.",
+  "pathwayTitle": "JBoss Business Resource Planner/OptaPlanner Cloud Balancing on OpenShift",
+  "difficulty": "beginner",
+  "time": "30-60 minutes",
+  "details": {
+    "steps": [
+      { "title": "Starting the Business Central workbench", "text": "starting-jboss-brms.md" },
+      { "title": "Creating the project repository", "text": "create-repository.md" },
+      { "title": "Creating the planner project", "text": "create-planner-project.md" },
+      { "title": "The Domain Model", "text": "domain-model.md" },
+      { "title": "Annotating the Domain Model", "text": "annotate-domain-model.md" },
+      { "title": "Solver Configuration", "text": "solver-configuration.md" },
+      { "title": "Planning Constraints", "text": "planning-constraints.md" },
+      { "title": "Score Holder", "text": "score-holder.md" },
+      { "title": "Hard Constraints", "text": "hard-constraints.md" },
+      { "title": "Soft Constraints", "text": "soft-constraints.md" },
+      { "title": "Configure build for OpenShift", "text": "configure-build-for-openshift.md" },
+      { "title": "Push to Github", "text": "push-to-github.md" },
+      { "title": "Deploying to OpenShift", "text": "deploying-to-openshift.md" },
+      { "title": "Testing the Service", "text": "testing-the-service.md" }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "code": "set-env.sh",
+      "courseData": "env-init.sh"
+
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "host01" : [
+        {
+          "file": "init-scenario.sh",
+          "target": "~/.init/",
+          "chmod": "+x"
+        }
+      ]
+    }
+  },
+  "environment": {
+    "showdashboard": true,
+    "dashboard": "Dashboard",
+    "uilayout": "terminal",
+    "hideintro": false,
+    "hidefinish": false
+  },
+  "backend": {
+    "imageid": "openshift-middleware",
+    "port": 8443
+  }
+}
