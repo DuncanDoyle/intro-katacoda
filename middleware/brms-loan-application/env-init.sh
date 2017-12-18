@@ -9,3 +9,5 @@ ssh root@host01 'echo "Creating new loan-demo project in OpenShift." >> script.l
 ssh root@host01 'for i in {1..200}; do oc new-project loan-demo --display-name="Loan Demo" --description="Red Hat JBoss BRMS Decision Server Loan Demo" && break || sleep 2; done'
 ssh root@host01 'echo "Creating JBoss BPM Suite workbench container in OpenShift." >> script.log'
 ssh root@host01 'for i in {1..200}; do oc new-app --name jboss-bpmsuite duncandoyle/jboss-bpmsuite:6.4 -n loan-demo && break || sleep 2; done'
+ssh root@host01 'echo "Creating route to JBoss BPM Suite workbench container in OpenShift." >> script.log'
+ssh root@host01 'for i in {1..200}; do oc expose svc/jboss-bpmsuite -n loan-demo && break || sleep 2; done'
