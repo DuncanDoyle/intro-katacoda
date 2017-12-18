@@ -18,6 +18,7 @@ echo
 
 #Wait for Business Central OpenShift deployment
 echo "Waiting for the JBoss BRMS workbench OpenShift Container to start"
+until oc project loan-demo &>2; do echo -n . && sleep 5; done
 oc rollout status dc/jboss-bpmsuite -n loan-demo
 echo
 
