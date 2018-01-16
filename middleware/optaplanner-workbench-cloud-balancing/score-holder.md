@@ -10,7 +10,7 @@ In order to be able to define variables of type `HardSoftScoreHolder`, we need t
 
 We can now create our `scoreHolder` global variable:
 
-1. Click on *New Item -> Global Variable(s)*. Give it the name *CloudBalancingSolutionScoreHolderGlobal*{{copy}}.
+1. Click on *New Item -> Global Variable(s)*. Give it the name `CloudBalancingSolutionScoreHolderGlobal`{{copy}}.
 2. In the editor, click on *Add*. Give the variable the alias `scoreHolder`{{copy}} and select the Class Name `org.optaplanner.core.api.score.buildin.hardsoft.HardSoftScoreHolder`.
 3. Click on *Save* to save the global variable.
 

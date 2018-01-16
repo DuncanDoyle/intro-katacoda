@@ -19,7 +19,7 @@ To do this, we first need to create a so-called Organizational Unit (OU) in the 
 Now we’re going to create a new repository in which we can store our project:
 
 1. Click on *Repositories -> New repository*
-2. Give it the *Repository Name* “cloud-balancing”{{copy}} and assign it to the “Demos” OU we created earlier (leave the *Managed Repository* checkbox unchecked).
+2. Give it the *Repository Name* `cloud-balancing`{{copy}} and assign it to the “Demos” OU we created earlier (leave the *Managed Repository* checkbox unchecked).
 3. Click on the "Finish" button.
 
 <img src="../../assets/intro-openshift/optaplanner-workbench-cloud-balancing/optaplanner-cloud-balancing-repository.png" width="800" />

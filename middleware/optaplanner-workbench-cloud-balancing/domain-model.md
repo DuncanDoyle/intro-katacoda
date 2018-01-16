@@ -19,11 +19,11 @@ Let's create the model:
 
 Give the object two fields:
 1. Click on *+ add field*
-2. Add the field with *Id* "id"{{copy}} and *Label* "ID"{{copy}} of type "long".
+2. Add the field with *Id* `id`{{copy}} and *Label* `ID`{{copy}} of type "long".
 3. Click on *Create and Continue*
-4. Add the field with *Id* "cpu"{{copy}} and *Label* "CPU"{{copy}} of type "int"
+4. Add the field with *Id* `cpu`{{copy}} and *Label* `CPU`{{copy}} of type "int"
 5. Click on *Create and Continue*
-6. Add the field with *Id* "cost"{{copy}} and *Label* "Cost"{{copy}} of type "int"
+6. Add the field with *Id* `cost`{{copy}} and *Label* `Cost`{{copy}} of type "int"
 7. Click on *Create*
 8. Click on the *Save* button to save the model.
 
@@ -31,9 +31,9 @@ Give the object two fields:
 
 Next, create a data object with name `Process`{{copy}} in package `optaplanner.cloud_balancing`{{copy}} with the following fields:
 
-1. id{{copy}}: long (Label: ID)
-2. requiredCpu{{copy}}: int (Label: Required CPU)
-3. computer{{copy}}: optaplanner.cloud_balancing.Computer (Label: Duration)
+1. `id`{{copy}}: long (Label: ID)
+2. `requiredCpu`{{copy}}: int (Label: Required CPU)
+3. `computer`{{copy}}: optaplanner.cloud_balancing.Computer (Label: Duration)
 
 Make sure to also save this model using the *Save* button in the editor. We can now create our rules.
 
@@ -41,9 +41,9 @@ Make sure to also save this model using the *Save* button in the editor. We can 
 
 Finally we will create our *PlanningSolution* class. Create another data object with name `CloudBalancingSolution`{{copy}} in package `optaplanner.cloud_balancing`{{copy}} with the following fields:
 
-1. processes{{copy}}: List<optaplanner.cloud_balancing.Process> (Label: Processes)
+1. `processes`{{copy}}: List<optaplanner.cloud_balancing.Process> (Label: Processes)
 Note that you can create a `List` of a certain type by selecting the type and checking the *List* checkbox.
-2. computers{{copy}}: List<optaplanner.cloud_balancing.Computer> (Label: Computers)
+2. `computers`{{copy}}: List<optaplanner.cloud_balancing.Computer> (Label: Computers)
 
 Save the model.
 
