@@ -35,6 +35,11 @@
       "external_link": "https://learn.openshift.com/middleware/java-batch-processing/",
       "course_id": "java-batch-processing",
       "title": "Java EE Batch Processing with OpenShift, WildFly & JBeret"
+    },
+    {
+      "external_link": "https://learn.openshift.com/middleware/optaplanner-workbench-cloud-balancing/",
+      "course_id": "optaplanner-workbench-cloud-balancing",
+      "title": "OptaPlanner Workbench Cloud Balancing demo"
     }
   ]
 }
