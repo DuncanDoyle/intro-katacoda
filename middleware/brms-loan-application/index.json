@@ -1,12 +1,12 @@
 {
-  "title": "JBoss BRMS Loan Application on OpenShift",
-  "description": "Learn how to create a rules demo project in JBoss BRMS running on OpenShift Container Platform.",
-  "pathwayTitle": "BRMS Loan Application on OpenShift",
+  "title": "Red Hat Decision Manager Loan Application on OpenShift",
+  "description": "Learn how to create a rules demo project in Red Hat Decision Manager running on OpenShift Container Platform.",
+  "pathwayTitle": "Red Hat Decision Manager Loan Application on OpenShift",
   "difficulty": "beginner",
   "time": "30-60 minutes",
   "details": {
     "steps": [
-      { "title": "Starting the Business Central workbench", "text": "starting-jboss-brms.md" },
+      { "title": "Starting the Decision Central workbench", "text": "starting-redhat-decisionmanager.md" },
       { "title": "Creating the rules-asset repository", "text": "create-repository.md" },
       { "title": "Creating the rules project", "text": "create-rules-project.md" },
       { "title": "The Data-Model", "text": "data-model.md" },
