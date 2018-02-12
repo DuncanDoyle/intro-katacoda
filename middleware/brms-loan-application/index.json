@@ -40,7 +40,7 @@
   },
   "environment": {
     "showdashboard": true,
-    "dashboards": [{"name":"Business Central","port":8080}, {"name":"OpenShift Console","port":8443}],
+    "dashboards": [{"name":"Decision Central","port":8080}, {"name":"OpenShift Console","port":8443}],
     "uilayout": "terminal",
     "hideintro": false,
     "hidefinish": false
