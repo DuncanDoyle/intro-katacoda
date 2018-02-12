@@ -48,5 +48,7 @@
   "backend": {
     "imageid": "openshift-middleware",
     "port": 8443
-  }
+  },
+  "environmentsprotocol": "http",
+  "environmentsdomain": ".openstack-environments.katacoda.com"
 }
