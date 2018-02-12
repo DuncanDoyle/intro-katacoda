@@ -50,5 +50,5 @@
     "port": 8443
   },
   "environmentsprotocol": "http",
-  "environmentsdomain": ".environments.katacoda.com"
+  "environmentsdomain": ".rhdm7-environments.katacoda.com"
 }
