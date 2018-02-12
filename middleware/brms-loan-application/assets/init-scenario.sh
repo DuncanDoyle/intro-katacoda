@@ -20,7 +20,7 @@ echo
 
 #Wait for BRMS workbench availability
 echo "Waiting for the Red Hat Decision Manager workbench to become available"
-export DC_HOST=oc describe route "loan-demo-rhdmcentr" | grep "Requested Host" | sed 's/Requested Host://' | tr -d '[:blank:]'
+export DC_HOST=$(oc describe route "loan-demo-rhdmcentr" | grep "Requested Host" | sed 's/Requested Host://' | tr -d '[:blank:]')
 until [ $(curl -sL -w "%{http_code}\\n" "http://$DC_HOST/decision-central" -o /dev/null) == 200 ]; do echo -n . && sleep 5; done
 echo
 
