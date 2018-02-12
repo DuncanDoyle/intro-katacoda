@@ -5,9 +5,8 @@ ssh root@host01 'for i in {1..200}; do wget https://raw.githubusercontent.com/jb
 ssh root@host01 'for i in {1..200}; do oc create -f rhdm70-image-streams-tech-preview.yaml -n openshift && break || sleep 2; done'
 ssh root@host01 'echo "Importing Red Hat Decision Manager 7 - Full template into OpenShift." >> script.log'
 #Remove persistent volume claim from the template, as we do not have PVC in Katacoda
-cat rhdm70-full.yaml | sed '/rhdmcentr-pvol/,+1 d' | sed '/claimName/d' | head -n -12
 ssh root@host01 'for i in {1..200}; do wget https://raw.githubusercontent.com/jboss-container-images/rhdm-7-openshift-image/rhdm70-dev/templates/rhdm70-full.yaml && break || sleep 2; done'
-ssh root@host01 'for i in {1..200}; do cat rhdm70-full.yaml | sed "/rhdmcentr-pvol/,+1 d" | sed "/claimName/d" | head -n -12 > rhdm7-full-no-persistence.yaml && break || sleep 2; done'
+ssh root@host01 'for i in {1..200}; do cat rhdm70-full.yaml | sed "/rhdmcentr-pvol/,+1 d" | sed "/claimName/d" | head -n -12 > rhdm70-full-no-persistence.yaml && break || sleep 2; done'
 #ssh root@host01 'for i in {1..200}; do oc create -f https://raw.githubusercontent.com/jboss-container-images/rhdm-7-openshift-image/rhdm70-dev/templates/rhdm70-full.yaml -n openshift && break || sleep 2; done'
 ssh root@host01 'for i in {1..200}; do oc create -f rhdm70-full-no-persistence.yaml -n openshift && break || sleep 2; done'
 ssh root@host01 'echo "Logging into OpenShift as developer." >> script.log'
