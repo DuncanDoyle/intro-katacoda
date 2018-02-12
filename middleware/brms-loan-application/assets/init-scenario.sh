@@ -15,13 +15,13 @@ echo
 #Wait for Business Central OpenShift deployment
 echo "Waiting for the JBoss BRMS workbench OpenShift Container to start"
 until oc project loan-demo &>2; do echo -n . && sleep 5; done
-oc rollout status "dc/jboss-bpmsuite" -n loan-demo
+oc rollout status "dc/loan-demo-rhdmcentr" -n loan-demo
 echo
 
 #Wait for BRMS workbench availability
 echo "Waiting for the BRMS workbench to become available"
-export BC_HOST=oc describe route "jboss-bpmsuite" | grep "Requested Host" | sed 's/Requested Host://' | tr -d '[:blank:]'
-until [ $(curl -sL -w "%{http_code}\\n" "http://$BC_HOST/business-central" -o /dev/null) == 200 ]; do echo -n . && sleep 5; done
+export DC_HOST=oc describe route "loan-demo-rhdmcentr" | grep "Requested Host" | sed 's/Requested Host://' | tr -d '[:blank:]'
+until [ $(curl -sL -w "%{http_code}\\n" "http://$DC_HOST/business-central" -o /dev/null) == 200 ]; do echo -n . && sleep 5; done
 echo
 
 echo "Enviroment ready!"
