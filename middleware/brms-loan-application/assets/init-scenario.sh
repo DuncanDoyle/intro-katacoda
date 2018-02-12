@@ -15,6 +15,7 @@ echo
 #Wait for Business Central OpenShift deployment
 echo "Waiting for the Red Hat Decision Manager workbench OpenShift Container to start"
 until oc project loan-demo &>2; do echo -n . && sleep 5; done
+until oc get dc/loan-demo-rhdmcentr &>2; do echo -n . && sleep 5; done
 oc rollout status "dc/loan-demo-rhdmcentr" -n loan-demo
 echo
 
