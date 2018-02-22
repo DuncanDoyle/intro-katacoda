@@ -1,8 +1,8 @@
 #!/bin/bash
 ssh root@host01 'echo "Importing Red Hat Decision Manager 7 Image Streams into OpenShift." >> script.log'
 # Need to temporarily patch the ImageStreams file to point to tech-preview version.
-ssh root@host01 'for i in {1..200}; do wget https://raw.githubusercontent.com/jboss-container-images/rhdm-7-openshift-image/rhdm70-dev/rhdm70-image-streams.yaml && wget https://raw.githubusercontent.com/jbossdemocentral/rhdm7-install-demo/master/support/openshift/patch_image_streams.sh && chmod 755 patch_image_streams.sh && ./patch_image_streams.sh && break || sleep 2; done'
-ssh root@host01 'for i in {1..200}; do oc create -f rhdm70-image-streams-tech-preview.yaml -n openshift && break || sleep 2; done'
+#ssh root@host01 'for i in {1..200}; do wget https://raw.githubusercontent.com/jboss-container-images/rhdm-7-openshift-image/rhdm70-dev/rhdm70-image-streams.yaml && wget https://raw.githubusercontent.com/jbossdemocentral/rhdm7-install-demo/master/support/openshift/patch_image_streams.sh && chmod 755 patch_image_streams.sh && ./patch_image_streams.sh && break || sleep 2; done'
+ssh root@host01 'for i in {1..200}; do oc create -f https://raw.githubusercontent.com/jboss-container-images/rhdm-7-openshift-image/rhdm70-dev/rhdm70-image-streams.yaml -n openshift && break || sleep 2; done'
 ssh root@host01 'echo "Importing Red Hat Decision Manager 7 - Full template into OpenShift." >> script.log'
 #Remove persistent volume claim from the template, as we do not have PVC in Katacoda
 ssh root@host01 'for i in {1..200}; do wget https://raw.githubusercontent.com/jboss-container-images/rhdm-7-openshift-image/rhdm70-dev/templates/rhdm70-full.yaml && break || sleep 2; done'
