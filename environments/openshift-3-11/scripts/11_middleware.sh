@@ -28,10 +28,15 @@ docker pull registry.access.redhat.com/rhdm-7/rhdm70-decisioncentral-openshift:1
 docker pull registry.access.redhat.com/rhdm-7/rhdm70-kieserver-openshift:1.1
 docker pull registry.access.redhat.com/rhdm-7/rhdm72-decisioncentral-openshift:1.1
 docker pull registry.access.redhat.com/rhdm-7/rhdm72-kieserver-openshift:1.1
+docker pull registry.redhat.io/rhdm-7/rhdm73-decisioncentral-openshift:1.0
+docker pull registry.redhat.io/rhdm-7/rhdm73-kieserver-openshift:1.0
 
 # Red Hat Process Automation Manager
 docker pull registry.access.redhat.com/rhpam-7/rhpam72-businesscentral-openshift:1.1
 docker pull registry.access.redhat.com/rhpam-7/rhpam72-kieserver-openshift:1.1
+docker pull registry.redhat.io/rhpam-7/rhpam73-businesscentral-openshift:1.0
+docker pull registry.redhat.io/rhpam-7/rhpam73-kieserver-openshift:1.0
+
 
 # Strimzi & Debezium
 STRIMZI_VERSION=0.2
